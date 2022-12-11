@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to the Budget Tracker!");
+        System.out.println("Please enter your name: ");
+        String name = input.nextLine();
+        System.out.println("Please enter your current balance: ");
+        double balance = input.nextDouble();
+        System.out.println("Please enter your monthly budget: ");
+        double budget = input.nextDouble();
+        System.out.println("Please enter your monthly expenses: ");
+        double expenses = input.nextDouble();
+        System.out.println("Please enter your monthly income: ");
+        double income = input.nextDouble();
+        double total = balance + income - expenses;
+        System.out.println("Your total balance is: " + total);
+        if (total > budget) {
+            System.out.println("You are over budget!");
+        } else if (total == budget) {
+            System.out.println("You are on budget!");
+        } else {
+            System.out.println("You are under budget!");
+        }
+    }
+}
