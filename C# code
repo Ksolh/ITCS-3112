@@ -1,0 +1,36 @@
+using System;
+
+
+namespace BudgetTracker
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the Budget Tracker!");
+            Console.WriteLine("Please enter your name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Please enter your current balance: ");
+            double balance = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please enter your monthly budget: ");
+            double budget = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please enter your monthly expenses: ");
+            double expenses = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please enter your monthly income: ");
+            double income = Convert.ToDouble(Console.ReadLine());
+            double total = balance + income - expenses;
+            Console.WriteLine("Your total balance is: " + total);
+            if (total > budget)
+            {
+                Console.WriteLine("You are over budget!");
+            }
+            else if (total == budget)
+            {
+                Console.WriteLine("You are on budget!");
+            }
+            else
+            {
+                Console.WriteLine("You are under budget!");
+            }
+        }
+    }
